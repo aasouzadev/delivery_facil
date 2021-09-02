@@ -26,3 +26,60 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.fixline {
+  height: 3rem;
+  padding: 6px;
+}
+
+.fixpad {
+  padding: 0px;
+}
+
+.fiximg {
+  align-content: center;
+  // height: 10em;
+  line-height: inherit;
+  min-height: 10rem;
+  max-height: 10rem;
+}
+
+.ion-title {
+  padding: 0px;
+}
+
+.logo {
+  max-height: 9rem;
+  padding-left: 18%;
+}
+
+.fixsub {
+  padding: 0px;
+  height: 2rem;
+}
+
+.fixhead {
+  padding: 6px;
+}
+ion-fab-button {
+  height: 60px;
+  width: 60px;
+  color: var(--ion-color-success-shade);
+
+}
+
+.cart-icon {
+  font-size: 35px;
+
+}
+ 
+.cart-length {
+  color: var(--ion-color-success-shade);
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-weight: 600;
+  font-size: 1em;
+  min-width: 25px;
+  z-index: 10;
+}

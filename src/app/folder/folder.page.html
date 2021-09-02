@@ -8,14 +8,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!--   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+        Components</a></p>
+  </div> -->
+  
+  <ion-row>
+    <!-- {{this.authService.getAuth().currentUser.uid}} -->
+    <ion-col size="6" class="ion-activated ion-no-padding" *ngFor="">
+
+
+      <ion-card class="ion-no-margin ion-no-padding fixpad">
+        <img async routerLink="" src='https://www.nestle.com.br/images/default-source/produtos/moca-leite-condensado16b97981b2fd4b7d864c77433d44f068.png' class="fiximg" />
+        <ion-card-header class="fixhead">
+          <ion-card-subtitle class="fixsub"></ion-card-subtitle>
+          <!-- <ion-card-title>Madison, WI</ion-card-title> -->
+        </ion-card-header>
+        <ion-card-content class="fixline">
+          <ion-icon  size="large" name="cart-outline"></ion-icon>
+          
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-col>
+
+  </ion-row>
 </ion-content>
