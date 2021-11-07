@@ -4,41 +4,50 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
+
+   <ion-fab vertical="botton" horizontal="end" slot="end" edge>
+      <ion-fab-button color="success" class="fabbtn" #cart>
+      <!--  <div class="cart-length">{{ cartItemCount | async }}</div>-->
+        <ion-icon name="cart" class="cart-icon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<!--   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
-        Components</a></p>
-  </div> -->
-  
+
   <ion-row>
-    <!-- {{this.authService.getAuth().currentUser.uid}} -->
-    <ion-col size="6" class="ion-activated ion-no-padding" *ngFor="">
 
-
-      <ion-card class="ion-no-margin ion-no-padding fixpad">
-        <img async routerLink="" src='https://www.nestle.com.br/images/default-source/produtos/moca-leite-condensado16b97981b2fd4b7d864c77433d44f068.png' class="fiximg" />
-        <ion-card-header class="fixhead">
-          <ion-card-subtitle class="fixsub"></ion-card-subtitle>
-          <!-- <ion-card-title>Madison, WI</ion-card-title> -->
-        </ion-card-header>
-        <ion-card-content class="fixline">
-          <ion-icon  size="large" name="cart-outline"></ion-icon>
-          
-        </ion-card-content>
-
-      </ion-card>
+    <ion-col size="6" class="ion-activated ion-no-padding" *ngFor="let item of oferta">
+    
+        <ion-card class="ion-no-margin ion-no-padding fixpad">
+          <img src="https://cdn-cosmos.bluesoft.com.br/products/{{item.codigobarras}}"
+            class="fiximg" />
+          <ion-card-header class="fixhead">
+            <ion-card-subtitle class="fixsub">{{item.descricaocompleta}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content class="fixline">
+           
+            <ion-icon size="large" name="cart-outline"></ion-icon> R$ {{item.precooferta}}
+          </ion-card-content>
+        </ion-card>
 
     </ion-col>
+    <ion-col>
+  
 
+  </ion-col>
   </ion-row>
+
+
+
+
+
 </ion-content>
+<style>
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+</style>
